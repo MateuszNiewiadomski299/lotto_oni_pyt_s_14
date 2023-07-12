@@ -13,6 +13,7 @@
 
         h1 {
             text-align: center;
+
         }
 
         .box {
@@ -30,14 +31,15 @@
             font-size: 24px;
             padding: 20px;
             font-weight: bold;
+            outline: none;
         }
 
-        .lotto-form > div {
+        .lotto-form > div{
             display: flex;
             gap: 10px;
         }
 
-        button[type='submit'] {
+        button[type='submit']{
             border: 2px solid black;
             background-color: lightskyblue;
             color: black;
@@ -48,7 +50,7 @@
             border-radius: 4px;
             cursor: pointer;
             width: 100%;
-            transition: all 400ms;
+            transition: all 800ms;
         }
 
         button[type='submit']:hover {
@@ -56,27 +58,51 @@
             color: lightskyblue;
         }
 
+        .input-group .error {
+            border-color: red;
+        }
+        .input-group{
+            position: relative;
+        }
+        .tooltip{
+            width: 90px;
+            /*min-height: 50px;*/
+            border: 1px solid red;
+            padding: 10px;
+            border-radius: 4px;
+            box-shadow: 5px 5px 10px 2px #8A8A8A;
+            position: absolute;
+            z-index: 99;
+            background-color: lightgreen;
+            font-size: 14px;
+            top: 0;
+            transform: translateY(-100%);
+            left: 5px;
+        }
+
     </style>
     <script src="./src/scripts/app.js" async defer></script>
 </head>
-
 <body>
+
+
 <div class="box">
     <h1>Lotto</h1>
+
     <div>
         <form action="" class="lotto-form">
             <div>
-                <div class="input-group"><label for="digit1">1</label><input type="text" id="digit1"></div>
-                <div class="input-group"><label for="digit2">2</label><input type="text" id="digit2"></div>
-                <div class="input-group"><label for="digit3">3</label><input type="text" id="digit3"></div>
-                <div class="input-group"><label for="digit4">4</label><input type="text" id="digit4"></div>
-                <div class="input-group"><label for="digit5">5</label><input type="text" id="digit5"></div>
-                <div class="input-group"><label for="digit6">6</label><input type="text" id="digit6"></div>
+                <div class="input-group"><label for="digit1">1.</label><input type="text" id="digit1"></div>
+                <div class="input-group"><label for="digit2">2.</label><input type="text" id="digit2"></div>
+                <div class="input-group"><label for="digit3">3.</label><input type="text" id="digit3"></div>
+                <div class="input-group"><label for="digit4">4.</label><input type="text" id="digit4"></div>
+                <div class="input-group"><label for="digit5">5.</label><input type="text" id="digit5"></div>
+                <div class="input-group"><label for="digit6">6.</label><input type="text" id="digit6"></div>
             </div>
             <button type="submit">Play</button>
         </form>
+        <div id="results"></div>
     </div>
-    <div id="results"></div>
 </div>
 </body>
 </html>
